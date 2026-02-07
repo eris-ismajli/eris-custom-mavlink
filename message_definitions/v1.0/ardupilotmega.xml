@@ -342,6 +342,30 @@
         <param index="7">Empty</param>
       </entry>
       <!-- 43003 MAV_CMD_EXTERNAL_POSITION_ESTIMATE moved to common.xml -->
+      
+            <!-- DIVE COMMAND -->
+      <entry value="43010" name="MAV_CMD_DO_DIVE_TO_TARGET"
+          hasLocation="true"
+          isDestination="true">
+        <description>
+            Command a fixed-wing aircraft to perform a nose-first dive
+            toward a target coordinate.
+        </description>
+
+        <param index="1" label="Pitch" units="deg">
+          Desired pitch angle. If zero or negative, auto-compute.
+        </param>
+
+        <param index="2" label="Yaw Mode">
+            Yaw control mode.
+        </param>
+        <param index="3" label="Throttle" units="%">
+            Throttle percentage during dive.
+        </param>
+        <param index="4" label="Abort Altitude" units="m">
+            Abort dive if altitude above ground is less than this.
+        </param>
+      </entry>
     </enum>
     <enum name="SCRIPTING_CMD">
       <entry value="0" name="SCRIPTING_CMD_REPL_START">
