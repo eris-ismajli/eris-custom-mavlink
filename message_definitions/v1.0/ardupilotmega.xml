@@ -344,7 +344,7 @@
       <!-- 43003 MAV_CMD_EXTERNAL_POSITION_ESTIMATE moved to common.xml -->
       
             <!-- DIVE COMMAND -->
-      <entry value="43010" name="MAV_CMD_DO_DIVE_TO_TARGET"
+      <entry value="42950" name="MAV_CMD_DO_DIVE_TO_TARGET"
           hasLocation="true"
           isDestination="true">
         <description>
