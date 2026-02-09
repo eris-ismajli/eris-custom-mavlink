@@ -383,9 +383,8 @@
         </param>
 
       </entry>
-
+  
     </enum>
-    <enum name="SCRIPTING_CMD">
       <entry value="0" name="SCRIPTING_CMD_REPL_START">
         <description>Start a REPL session.</description>
       </entry>
@@ -2102,11 +2101,36 @@
       <field type="uint16_t[4]" name="rpm" units="rpm">RPM (eRPM).</field>
       <field type="uint16_t[4]" name="count">count of telemetry packets received (wraps at 65535).</field>
     </message>
+      
+    <message id="11045" name="GUIDED_DIVE_IMPACT">
+      <description>
+        Telemetry emitted when a guided dive impacts the ground.
+      </description>
+
+      <field type="int32_t" name="lat" units="degE7">
+        Impact latitude
+      </field>
+
+      <field type="int32_t" name="lon" units="degE7">
+        Impact longitude
+      </field>
+
+      <field type="float" name="impact_speed_mps" units="m/s">
+        Impact speed
+      </field>
+
+      <field type="float" name="distance_error_m" units="m">
+        Distance from target at impact
+      </field>
+    </message>
+    
     <message id="11060" name="NAMED_VALUE_STRING">
       <description>Send a key-value pair as string. The use of this message is discouraged for normal packets, but a quite efficient way for testing new messages and getting experimental debug output.</description>
       <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
       <field type="char[10]" name="name" instance="true">Name of the debug variable</field>
       <field type="char[64]" name="value">Value of the debug variable</field>
     </message>
+  
+
   </messages>
 </mavlink>
