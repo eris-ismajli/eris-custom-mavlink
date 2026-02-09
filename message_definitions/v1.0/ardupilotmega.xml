@@ -385,6 +385,8 @@
       </entry>
   
     </enum>
+
+    <enum name="SCRIPTING_CMD">
       <entry value="0" name="SCRIPTING_CMD_REPL_START">
         <description>Start a REPL session.</description>
       </entry>
@@ -398,6 +400,7 @@
         <description>Stop execution of scripts and restart.</description>
       </entry>
     </enum>
+
     <enum name="SECURE_COMMAND_OP">
       <entry value="0" name="SECURE_COMMAND_GET_SESSION_KEY">
         <description>Get an 8 byte session key which is used for remote secure updates which operate on flight controller data such as bootloader public keys. Return data will be 8 bytes on success. The session key remains valid until either the flight controller reboots or another SECURE_COMMAND_GET_SESSION_KEY is run.</description>
