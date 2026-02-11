@@ -383,6 +383,67 @@
         </param>
 
       </entry>
+      
+            <entry value="42951"
+       name="MAV_CMD_NAV_DIVE_TO_TARGET"
+       hasLocation="true"
+       isDestination="true">
+
+        <description>
+          Navigate a fixed-wing aircraft to a target coordinate using a
+          controlled nose-first dive. The vehicle will align to the target
+          and execute a guided dive profile until impact or abort conditions
+          are met. Mission execution will continue once the dive completes.
+        </description>
+
+        <param index="1"
+              label="Pitch"
+              units="deg">
+          Desired dive pitch angle. If zero or negative, the autopilot
+          will automatically compute an appropriate pitch profile.
+        </param>
+
+        <param index="2"
+              label="Yaw Mode">
+          Yaw control mode during dive.
+          0 = Auto align to target
+          1 = Maintain current heading
+        </param>
+
+        <param index="3"
+              label="Throttle"
+              units="%"
+              minValue="0"
+              maxValue="100">
+          Throttle percentage during dive.
+        </param>
+
+        <param index="4"
+              label="Abort Altitude"
+              units="m"
+              minValue="0">
+          Abort dive if altitude above ground becomes less than this value.
+        </param>
+
+        <param index="5"
+              label="Latitude"
+              units="deg">
+          Target latitude (WGS84).
+        </param>
+
+        <param index="6"
+              label="Longitude"
+              units="deg">
+          Target longitude (WGS84).
+        </param>
+
+        <param index="7"
+              label="Altitude"
+              units="m">
+          Target altitude (AMSL).
+        </param>
+
+      </entry>
   
     </enum>
 
